@@ -109,6 +109,8 @@ int main(int argc, char** argv)
     if (qEnvironmentVariable("QT_QPA_PLATFORM") == "") {
         qputenv("QT_QPA_PLATFORM", "xcb");
     }
+
+		QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::RoundPreferFloor);
 #endif
 
 #ifdef Q_OS_WIN
